@@ -32,7 +32,8 @@ h2 {
 
 #text, #number {
 	border: 1px solid gray;
-	font-size: 90%;
+	font-size: 14px;
+	font-family: sans-serif;
 }
 
 #text {
@@ -50,8 +51,16 @@ h2 {
 
 #submit {
 	margin: 0;
-	font-size: 90%;
+	font-size: 14px;
 	padding: 5px;
+	font-family: sans-serif;
+}
+
+#language {
+	margin: 0 0 0 1em;
+	padding: 5px;
+	font-family: sans-serif;
+	font-size: 14px;
 }
 </style>
 
