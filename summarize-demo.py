@@ -12,6 +12,20 @@ DEMO_TEXT = (
     " defeat him. He is no match for their abilities."
 )
 
+LANGUAGES = (
+    'english',
+    'spanish',
+    'danish',
+    'dutch',
+    'finnish',
+    'french',
+    'german',
+    'italian',
+    'norwegian',
+    'portuguese',
+    'swedish',
+)
+
 
 app = Bottle()
 
@@ -22,11 +36,14 @@ app = Bottle()
 def index():
     text = request.forms.getunicode('text')
     number = int_or_none(request.forms.get('number'))
-    result = summarize(text, number) if number and text else None
+    language = request.forms.get('language') or 'english'
+    result = summarize(text, number, language) if number and text else None
     return {
         'text': text or DEMO_TEXT,
         'result': result,
         'number': number or 5,
+        'language': language,
+        'available_languages': LANGUAGES
     }
 
 

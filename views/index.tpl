@@ -71,6 +71,15 @@ h2 {
 			</label>
 		</p>
 		<p>
+			<label for="language">Language:
+				<select name="language" id="language">
+					% for a_language in available_languages:
+						<option value="{{ a_language }}"{{ " selected" if language == a_language else "" }}>{{ a_language.capitalize() }}</option>
+					% end
+				</select>
+			</label>
+		</p>
+		<p>
 			<button type="submit" id="submit">Summarize</button>
 		</p>
 	</form>
