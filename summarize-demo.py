@@ -13,16 +13,16 @@ DEMO_TEXT = (
 )
 
 LANGUAGES = (
-    'english',
-    'spanish',
     'danish',
     'dutch',
+    'english',
     'finnish',
     'french',
     'german',
     'italian',
     'norwegian',
     'portuguese',
+    'spanish',
     'swedish',
 )
 
